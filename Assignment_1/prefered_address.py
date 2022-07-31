@@ -3,7 +3,7 @@ from customer_details import *
 def prefred_address(user):
     address = []
     data = []
-    data1 =[]
+    data1 = []
     users_list = [ key for key in cust_accounts.keys() ]
     if user in users_list:
         pref_add_type = cust_accounts.get(user).get('Address',{}).get('Preferred')
@@ -31,6 +31,6 @@ def prefred_address(user):
         
 
 if __name__ == "__main__":
-    name = input('Enter the customer Name or 'all' to get data for everyone\n')
+    name = input('Enter the customer Name or all to get data for everyone\n')
     pref_address = prefred_address(name)
     print(f"Prefred address {pref_address}") 
